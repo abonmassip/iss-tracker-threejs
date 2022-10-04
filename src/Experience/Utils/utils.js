@@ -13,17 +13,12 @@ export const positionFromCoordinates = (lat, lon, r) => {
 
 export const fetchIssCoordinates = async () => {
   try {
-    const response = await fetch('http://api.open-notify.org/iss-now.json');
+    const response = await fetch('https://api.wheretheiss.at/v1/satellites/25544');
     const data = await response.json();
-
-    if (data.message === 'success') {
-      console.log(data);
-      return data;
-    } else {
-      alert('The API is not working, try again later');
-    }
+    console.log(data);
+    return data;
   } catch (error) {
     console.log(error);
-    alert('Error fetching ISS location. Try disabling HTTPS-only on your browser and reload the page. The API used is http://open-notify.org/');
+    alert('Error fetching ISS location');
   }
 }

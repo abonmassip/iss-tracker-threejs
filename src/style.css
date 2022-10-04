@@ -33,6 +33,10 @@ ul {
   list-style: none;
 }
 
+span {
+  font-weight: bold;
+}
+
 #coordinatesText {
   display: none;
 }

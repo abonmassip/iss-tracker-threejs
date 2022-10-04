@@ -8,6 +8,7 @@ const messageText = document.querySelector('#message');
 const coordinatesText = document.querySelector('#coordinatesText');
 const latitudeText = document.querySelector('#latitude');
 const longitudeText = document.querySelector('#longitude');
+const velocityText = document.querySelector('#velocity');
 const antennaIcon = document.querySelector('#antennaIcon');
 const issText = document.querySelector('#iss');
 
@@ -31,6 +32,7 @@ export default class Iss {
 
     this.latitude = 0;
     this.longitude = 0;
+    this.velocity = 0;
     this.radius = 0;
 
     this.issTrail = [];
@@ -40,7 +42,7 @@ export default class Iss {
     this.raycaster = new THREE.Raycaster();
 
     this.setIss();
-    // this.startApi();
+    this.startApi();
 
     // Debug
     this.debugObject = {
@@ -100,8 +102,9 @@ export default class Iss {
     setTimeout(async () => {
       try {
         const data = await fetchIssCoordinates();
-        const lat = parseFloat(data.iss_position.latitude);
-        const lon = parseFloat(data.iss_position.longitude);
+        const lat = parseFloat(data.latitude);
+        const lon = parseFloat(data.longitude);
+        this.velocity = Math.round(data.velocity).toLocaleString('en');
 
         this.moveIss(lat, lon);
       } catch (error) {
@@ -160,6 +163,8 @@ export default class Iss {
 
     const longitudeFx = new TextScramble(longitudeText);
     longitudeFx.setText(this.longitude.toString());
+
+    velocityText.innerText = this.velocity.toString();
   }
 
   update() {
