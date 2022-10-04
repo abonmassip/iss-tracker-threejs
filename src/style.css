@@ -20,7 +20,7 @@ html, body {
 .info {
   display: flex;
   flex-direction: column;
-  font-size: 16pt;
+  font-size: 1.3em;
   padding: 5vh;
   background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
   -webkit-user-select: none;
@@ -54,7 +54,7 @@ span {
   top: -60px;
   left: 30px;
   padding: 4px;
-  font-size: 24px;
+  font-size: 1.6em;
   transform: scale(0,0);
   transition: transform 0.3s;
 }
@@ -103,13 +103,9 @@ span {
   bottom: 0px;
   padding: 16px 0;
   color: #bbbbbb;
-  font-size: 12px;
+  font-size: 0.75em;
   font-family: Helvetica, Arial, sans-serif;
   text-align: center;
-}
-
-.footer span {
-  font-size: 11px;
 }
 
 a {
@@ -120,4 +116,14 @@ a {
 
 a:hover {
   color: #9DDFFF;
+}
+
+@media only screen and (max-width: 800px) {
+  .info {
+    font-size: 0.7em;
+  }
+
+  .footer {
+    font-size: 0.6em;
+  }
 }
