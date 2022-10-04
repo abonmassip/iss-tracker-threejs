@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISS tracker Three.js</title>
+</head>
+<body>
+  <canvas class="webgl"></canvas>
+  <div class="info">
+    <h1>International Space Station</h1>
+    <p id="message">Waiting for ISS position...</p>
+    <ul id="coordinatesText">
+      <li>Latitude: <span id="latitude">0</span></li>
+      <li>Longitude: <span id="longitude">0</span></li>
+    </ul>
+  </div>
+  <div id="iss">
+    <div class="text">ISS</div>
+  </div>
+  <div id="antennaIcon">
+    <svg width="50" height="50" viewBox="0 0 612 612" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0_1_2)">
+        <path
+          d="M286.458 291.155C275.822 298.407 271.85 312.201 277 324C276.997 323.997 207.849 368.794 207.849 368.794C160.585 321.529 113.319 274.264 66.0551 227C-22.0184 315.074 -22.0184 457.871 66.0551 545.945C154.129 634.018 296.926 634.018 385 545.945C337.735 498.68 290.47 451.415 243.206 404.151L290.834 337.834C302.632 342.983 316.425 339.012 323.679 328.376C330.931 317.74 329.592 303.448 320.49 294.346C311.385 285.244 297.093 283.903 286.458 291.155Z"
+          fill="white" />
+        <path
+          class="wave1"
+          d="M306 167C306 176.996 306 186.993 306 196.989C366.205 196.989 415.011 245.795 415.011 306C425.008 306 435.004 306 445 306C445 229.233 382.767 167 306 167Z"
+        />
+        <path
+          class="wave2"
+          d="M306 87C306 96.9977 306 106.995 306 116.993C410.386 116.993 495.007 201.614 495.007 306C505.005 306 515.002 306 525 306C525.002 185.049 426.951 87 306 87Z"
+        />
+        <path
+          class="wave3"
+          d="M306 7C306 16.9984 306 26.9967 306 36.9951C454.566 36.9951 575.005 157.433 575.005 306C585.003 306 595.002 306 605 306C605 140.868 471.131 7 306 7Z"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_1_2">
+          <rect width="612" height="612" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="footer">
+    <p>
+      <a href="https://abonmassip.dev/" target="_blank">
+        Albert Bonmassip
+      </a> © 2022 |
+      <a href="https://github.com/abonmassip/iss-tracker-threejs" target="_blank">
+        Github
+      </a> |
+      <a href="http://open-notify.org/Open-Notify-API/ISS-Location-Now/" target="_blank">
+        Open Notify API
+      </a>
+    </p>
+  </div>
+</body>
+</html>

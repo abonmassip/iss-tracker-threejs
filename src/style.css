@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+  z-index: -1;
+}
+
+html, body {
+  overflow: hidden;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  font-size: 16pt;
+  padding: 5vh;
+  background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul {
+  list-style: none;
+}
+
+#coordinatesText {
+  display: none;
+}
+
+/* ISS TAG */
+
+#iss {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#iss .text {
+  position: absolute;
+  top: -60px;
+  left: 30px;
+  padding: 4px;
+  font-size: 24px;
+  transform: scale(0,0);
+  transition: transform 0.3s;
+}
+
+#iss.visible .text {
+  transform: scale(1, 1);
+}
+
+/* ANTENNA */
+
+#antennaIcon {
+  position: fixed;
+  bottom: 5vh;
+  left: 5vh;
+  opacity: 0.4;
+}
+
+#antennaIcon.loading {
+  opacity: 0.8;
+}
+
+@keyframes antenna {
+  from {
+    fill: none;
+  }
+
+  to {
+    fill: white;
+  }
+}
+
+.loading .wave1 {
+  animation: antenna 0.4s linear 0s infinite alternate;
+}
+.loading .wave2 {
+  animation: antenna 0.4s linear 0.2s infinite alternate;
+}
+.loading .wave3 {
+  animation: antenna 0.4s linear 0.4s infinite alternate;
+}
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  padding: 16px 0;
+  color: #bbbbbb;
+  font-size: 12px;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+.footer span {
+  font-size: 11px;
+}
+
+a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #9DDFFF;
+}
