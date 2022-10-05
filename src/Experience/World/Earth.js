@@ -71,7 +71,7 @@ export default class Earth {
         'vec3 totalEmissiveRadiance = emissive;',
         `vec3 totalEmissiveRadiance = emissive;
         float positionZ = vWorldPosition.z;
-        positionZ = max(0.0, positionZ + 0.2);
+        positionZ = max(0.0, positionZ + 0.1);
         positionZ = min(1.0, positionZ);
         totalEmissiveRadiance.r = totalEmissiveRadiance.r * positionZ;
         totalEmissiveRadiance.g = totalEmissiveRadiance.g * positionZ;
