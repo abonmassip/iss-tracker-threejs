@@ -1,4 +1,7 @@
-# Three.js Journey
+# Three.js ISS tracking
+
+Api used: https://wheretheiss.at/w/developer
+
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
